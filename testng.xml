@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="pCloudy Mobile automation test suite">
+    <test name="Appium Demo Tests">
+        <parameter name="platformName" value="ANDROID"/>
+        <parameter name="platformVersion" value="12.0.0"/>
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.AndroidTests">
+                <methods>
+                    <include name="testEndUserLicense"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite> <!-- Suite -->
