@@ -2,6 +2,7 @@ package io.github.mfaisalkhatri.drivers;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import io.appium.java_client.ios.IOSDriver;
 import lombok.Builder;
@@ -23,6 +24,7 @@ public class IOSDriverManager {
     public IOSDriverManager createIOSDriver () {
         try {
             driver = new IOSDriver (new URL ("https://device.pcloudy.com/appiumcloud/wd/hub"), capabilities ());
+            setupDriverTimeouts ();
         } catch (MalformedURLException e) {
             throw new RuntimeException (e);
         }
@@ -30,11 +32,14 @@ public class IOSDriverManager {
     }
 
     public IOSDriver getDriver () {
-        if (null != driver) {
-            createIOSDriver ();
-        }
         return driver;
     }
+    private void setupDriverTimeouts () {
+        getDriver ().manage ()
+            .timeouts ()
+            .implicitlyWait (30, TimeUnit.SECONDS);
+    }
+
 
     public void quitDriver () {
         driver.quit ();
