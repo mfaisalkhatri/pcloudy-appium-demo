@@ -53,6 +53,7 @@ public class AndroidDriverManager {
         capabilities.setCapability ("pCloudy_DurationInMinutes", 10);
         capabilities.setCapability ("newCommandTimeout", 600);
         capabilities.setCapability ("launchTimeout", 90000);
+        capabilities.setCapability ("autoGrantPermissions", true);
         capabilities.setCapability ("pCloudy_DeviceFullName", "GOOGLE_Pixel3_Android_12.0.0_a6091");
         capabilities.setCapability ("platformVersion", platformVersion);
         capabilities.setCapability ("platformName", platform);

@@ -8,6 +8,7 @@
             <class name="io.github.mfaisalkhatri.tests.AndroidTests">
                 <methods>
                     <include name="testEndUserLicense"/>
+                    <include name="testLogin"/>
                 </methods>
             </class>
         </classes>
