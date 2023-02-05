@@ -1,8 +1,8 @@
 package io.github.mfaisalkhatri.pages.android;
 
-import io.appium.java_client.MobileElement;
+import io.appium.java_client.MobileBy;
 import io.github.mfaisalkhatri.drivers.AndroidDriverManager;
-import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 /**
  * @author Faisal Khatri
@@ -16,19 +16,19 @@ public class LoginPage {
         this.androidDriverManager = androidDriverManager;
     }
 
-    private MobileElement userNamefield () {
-        return (MobileElement) androidDriverManager.getDriver ()
-            .findElement (By.id ("com.pcloudy.appiumdemo:id/username"));
+    private WebElement userNamefield () {
+        return androidDriverManager.getDriver ()
+            .findElement (MobileBy.id ("com.pcloudy.appiumdemo:id/username"));
     }
 
-    private MobileElement passwordField () {
-        return (MobileElement) androidDriverManager.getDriver ()
-            .findElement (By.id ("com.pcloudy.appiumdemo:id/password"));
+    private WebElement passwordField () {
+        return androidDriverManager.getDriver ()
+            .findElement (MobileBy.id ("com.pcloudy.appiumdemo:id/password"));
     }
 
-    private MobileElement loginBtn () {
-        return (MobileElement) androidDriverManager.getDriver ()
-            .findElement (By.id ("com.pcloudy.appiumdemo:id/loginbtn"));
+    private WebElement loginBtn () {
+        return androidDriverManager.getDriver ()
+            .findElement (MobileBy.id ("com.pcloudy.appiumdemo:id/loginbtn"));
     }
 
     public void performLogin (String userName, String password) {

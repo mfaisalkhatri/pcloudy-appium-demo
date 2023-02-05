@@ -34,12 +34,12 @@ public class IOSDriverManager {
     public IOSDriver getDriver () {
         return driver;
     }
+
     private void setupDriverTimeouts () {
         getDriver ().manage ()
             .timeouts ()
             .implicitlyWait (30, TimeUnit.SECONDS);
     }
-
 
     public void quitDriver () {
         driver.quit ();
@@ -53,6 +53,7 @@ public class IOSDriverManager {
         capabilities.setCapability ("pCloudy_DurationInMinutes", 10);
         capabilities.setCapability ("newCommandTimeout", 600);
         capabilities.setCapability ("launchTimeout", 90000);
+        capabilities.setCapability ("autoAcceptAlerts", true);
         capabilities.setCapability ("pCloudy_DeviceFullName", "APPLE_iPhone11ProMax_iOS_15.0.0_b99a8");
         capabilities.setCapability ("platformVersion", platformVersion);
         capabilities.setCapability ("platformName", platform);
@@ -61,9 +62,9 @@ public class IOSDriverManager {
         capabilities.setCapability ("appPackage", "com.pcloudy.appiumdemo");
         capabilities.setCapability ("appActivity", "com.ba.mobile.LaunchActivity");
         capabilities.setCapability ("pCloudy_WildNet", "false");
-        capabilities.setCapability ("pCloudy_EnableVideo", "false");
+        capabilities.setCapability ("pCloudy_EnableVideo", "true");
         capabilities.setCapability ("pCloudy_EnablePerformanceData", "false");
-        capabilities.setCapability ("pCloudy_EnableDeviceLogs", "false");
+        capabilities.setCapability ("pCloudy_EnableDeviceLogs", "true");
         return capabilities;
     }
 }

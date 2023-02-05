@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="pCloudy Mobile automation test suite">
-    <test name="Appium Demo Tests">
+<suite name="pCloudy Mobile automation with appium test suite">
+    <test name="Android Demo Tests">
         <parameter name="platformName" value="ANDROID"/>
         <parameter name="platformVersion" value="12.0.0"/>
         <classes>
             <class name="io.github.mfaisalkhatri.tests.AndroidTests">
                 <methods>
                     <include name="testEndUserLicense"/>
+                    <include name="testLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="iOS Demo Tests" enabled="false">
+        <parameter name="platformName" value="IOS"/>
+        <parameter name="platformVersion" value="15.0.0"/>
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.IOSTests">
+                <methods>
                     <include name="testLogin"/>
                 </methods>
             </class>
