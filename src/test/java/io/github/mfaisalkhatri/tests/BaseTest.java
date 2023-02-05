@@ -37,12 +37,11 @@ public class BaseTest {
 
     @AfterClass (alwaysRun = true)
     public void tearDown () {
-        if(androidDriverManager!=null) {
+        if (androidDriverManager != null) {
             androidDriverManager.quitDriver ();
-        } else {
+        } else if (iosDriverManager != null) {
             iosDriverManager.quitDriver ();
         }
-
 
     }
 }

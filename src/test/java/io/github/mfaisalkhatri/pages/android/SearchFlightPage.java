@@ -1,8 +1,8 @@
 package io.github.mfaisalkhatri.pages.android;
 
-import io.appium.java_client.MobileElement;
+import io.appium.java_client.MobileBy;
 import io.github.mfaisalkhatri.drivers.AndroidDriverManager;
-import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 /**
  * @author Faisal Khatri
@@ -16,9 +16,9 @@ public class SearchFlightPage {
         this.androidDriverManager = androidDriverManager;
     }
 
-    private MobileElement searchFlightBtn () {
-        return (MobileElement) androidDriverManager.getDriver ()
-            .findElement (By.id ("com.pcloudy.appiumdemo:id/searchFlights"));
+    private WebElement searchFlightBtn () {
+        return androidDriverManager.getDriver ()
+            .findElement (MobileBy.id ("com.pcloudy.appiumdemo:id/searchFlights"));
     }
 
     public boolean isSearchFlightButtonDisplayed () {

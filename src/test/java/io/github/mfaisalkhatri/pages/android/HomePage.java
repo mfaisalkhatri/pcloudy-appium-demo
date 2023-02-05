@@ -4,6 +4,7 @@ import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.github.mfaisalkhatri.drivers.AndroidDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 /**
  * @author Faisal Khatri
@@ -23,18 +24,18 @@ public class HomePage {
             .getText ();
     }
 
-    private MobileElement acceptLicenseBtn () {
-        return (MobileElement) androidDriverManager.getDriver ()
-            .findElement (By.id ("com.pcloudy.appiumdemo:id/accept"));
+    private WebElement acceptLicenseBtn () {
+        return  androidDriverManager.getDriver ()
+            .findElement (MobileBy.id ("com.pcloudy.appiumdemo:id/accept"));
     }
 
     public void acceptLicense () {
         acceptLicenseBtn ().click ();
     }
 
-    private MobileElement loginBtn () {
-        return (MobileElement) androidDriverManager.getDriver ()
-            .findElement (By.id ("com.pcloudy.appiumdemo:id/ecLoginButton"));
+    private WebElement loginBtn () {
+        return androidDriverManager.getDriver ()
+            .findElement (MobileBy.id ("com.pcloudy.appiumdemo:id/ecLoginButton"));
     }
 
     public void clickLoginBtn () {
