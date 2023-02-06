@@ -15,4 +15,4 @@
   OR ping me on any of the social media sites using the below link:
     - [Linktree](https://linktr.ee/faisalkhatri)
 
-## :thought_balloon: Checkout the blogs related to Testing on my [medium] blog(https://medium.com/@iamfaisalkhatri)
+## :thought_balloon: Checkout the blogs related to Testing on my [medium](https://medium.com/@iamfaisalkhatri) blog
