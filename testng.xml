@@ -13,7 +13,7 @@
             </class>
         </classes>
     </test>
-    <test name="iOS Demo Tests" enabled="false">
+    <test name="iOS Demo Tests">
         <parameter name="platformName" value="IOS"/>
         <parameter name="platformVersion" value="15.0.0"/>
         <classes>
